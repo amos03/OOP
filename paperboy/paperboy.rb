@@ -19,12 +19,15 @@ def deliver(start_address,end_address)
     else
         day_earnings=0.25*quota + 0.5*(end_address-start_address-quota)
         return day_earnings.to_f
+    end
 end
 
 def report
     puts "I'm #{@name}, I've delivered #{@experience} papers and earned $#{day_earnings} so far."
+end
 
 p paperboy1 = Paperboy.new("Shalom")
 
+report.paperboy1
 
 end
