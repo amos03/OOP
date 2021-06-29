@@ -17,20 +17,25 @@ p cat2
 
 #4 return meal time
 def eats_at
-    puts "=============Meal Time=============" 
     if @meal_time < 12
-        puts "#{@meal_time} AM"
+        return "#{@meal_time} AM"
     elsif @meal_time > 12
-        puts "#{@meal_time -12} PM"
+        return "#{@meal_time -12} PM"
     elsif @meal_time==0
-        puts "Midnight"
+        return "Midnight"
     else
-        puts "Current meal time is invalid."
+        return "Current meal time is invalid."
     end
-    puts "==================================="
 end
 
 cat1.eats_at
 cat2.eats_at
 
+#5 Meow method
+def meow
+    return "My name is #{@name} and I eat #{@preferred_food} at #{eats_at}."
+end
+
+puts cat1.meow
+puts cat2.meow
 end
