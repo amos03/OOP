@@ -18,15 +18,36 @@ def collect_treasure
     end
 end
 
+def restart
+    initialize
+end
+
+damage = 0
+def do_battle(damage)
+    @health_points -= damage
+    if @health_points < 1
+        @lives -= 1
+        if @lives < 1
+            restart
+        end
+        @health_points=10
+    end
+end
+
+
 p player1 = Player.new
 
 player1.level_up
 
 p player1
 
-20.times do
+10.times do
     player1.collect_treasure
 end
+
+p player1
+
+player1.do_battle(10)
 
 p player1
 
