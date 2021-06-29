@@ -1,6 +1,6 @@
 class Cat
-def initialize
-    @name
-    @preferred_food
-    @meal_time
+def initialize (cat_name, food, meal_time_pref)
+    @name=cat_name
+    @preferred_food=food
+    @meal_time=meal_time_pref
 end
